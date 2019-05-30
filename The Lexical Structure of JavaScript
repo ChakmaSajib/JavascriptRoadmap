@@ -1,0 +1,81 @@
+The Lexical Structure of JavaScript 
+
+
+১। জাভাস্ক্রিপ্ট এর বিল্ডিং ব্লক হচ্ছে -
+    #ইউনিকোড(Unicode), 
+    #সেমিকোলন(Semicolons), 
+    #সাদা স্পেস(White Space), 
+    #কেস সেন্সসেটিভ(Case Sensitive),
+    #কমেন্ট(Comments), 
+    #আক্ষরিক, শনাক্তকারী বা আইডেন্ডিফায়ার(Literals and identifiers) এবং
+    কিছু রিসার্ভ শব্দ(Reserved Words)। 
+
+১।ইউনিকোড(Unicode) - জাভাস্ক্রিপ্ট মূলত ইউনিকোড দিয়ে লেখা যার কারণে ইমো(Emojis)- কে ভ্যারিয়েবল হিসেবেও ব্যবহার করা যাবে । তার মানে আইডেন্ডিফায়ারকে যে কোন ভাষায় লেখা যাবে। উদাহরণ হিসেবে - চাইনিজ বা বাংলা ভাষায়।
+
+কিছু ভ্যালিড জাভাস্ক্রিপ্ট ভ্যারিয়েবল নামের উদাহরণ-
+//How convenient 
+var π = Math.PI;
+
+// Sometimes, you just have to use the Bad Parts of JavaScript:
+var ಠ_ಠ = eval;
+
+// Code, Y U NO WORK?!
+var ლ_ಠ益ಠ_ლ = 42;
+
+// How about a JavaScript library for functional programming?
+var λ = function() {};
+
+// Fun with Roman numerals
+var Ⅳ = 4;
+var Ⅴ = 5;
+Ⅳ + Ⅴ; // 9
+
+
+
+
+২। সেমিকোলন(Semicolons)- জাভাস্ক্রিপ্ট এর ক্ষেত্রে সেমিকোলন আবশ্যক নয় যদিও অনেকটাই সি প্রোগ্রামিং ল্যাংগুয়েজ এর মত প্রত্যেক লাইনের শেষে সেমিকোলন ব্যবহার করা যায় ।
+ উদাহরণ - 
+ var number = 12;
+ // or 
+ var number = 12
+
+
+ ৩। সাদা স্পেস(White Space) -জাভাস্ক্রিপ্ট এ সাদা স্পেসের(White Space) কোন মানে নেই । কোডের ভালো স্টাইল দেওয়ার জন্য কমন কিছু স্টাইল নির্বাচন করে কোড লেখা যায় এইক্ষেত্রে Linter অথবা Prettier এই দুটো  টূলসের ব্যবহার বেশ কাজের এবং ২ তা white space ক্যারেক্টার দিয়ে ইন্ডেন্ট (Indent) করে লেখা ভালো
+
+ ৪। কেস সেন্সসেটিভ(Case Sensitive) :  জাভাস্ক্রিপ্ট কেস সেন্সসেটিভ। ভ্যারিয়েবলের নাম যেমন - something এবং Something দুটোই ভিন্ন । আইডেন্ডিফায়ার (Indentifier) বেলায়ও একই।
+
+ ৫। কমেন্ট (Comments) - দুইভাবে কমেন্ট ব্যবহার করা যায় যেমন- 
+   // single comment 
+    var hi ="Sajib Chakma"
+   /*
+     multiple lines comment 
+   */
+   var CurrentLocation = "China"
+
+৬। লিটারেল এবং আইডেন্ডিফায়(Literals and identifiers): কোড লেখার সময় ভ্যারিয়েবল, array অবজেক্টের ইত্যাদির মধ্যে -  ভ্যালু লিটারেল হিসেবে আমরা নাম্বার ex. - var num = 4 , স্ট্রিং  ex. - var myString = " Sajib" , বুলিয়ান ex. - var Right= true , কিছু constructs যেমন - অবজেক্ট লিটারেল var objectMy ={ color : 'red', shape : 'Rectangle'} অথবা array লিটারেল ex. - var myArray = ['a', 'b'] নির্ধারণ করতে পারি।
+ আর আইডেন্ডিফায় হচ্ছে মূলত নাম । আমরা ভ্যারিয়েবল, ফাংশন কিংবা অবজেক্টকে চেনার জন্য আমাদের ইচ্ছেমত নাম দিয়ে থাকি । যেমন - var myObject = {} . এখানে myObject হচ্ছে আইডেন্ডিফায় । 
+ আইডেন্ডিফায় ের নাম _ (underscore -  ex. _test), $(dollar sign - ex. $test ), unicode/emoji দিয়ে লেখা যায় । 
+
+৭। রিসার্ভ শব্দ (Reserved words) -  রিসার্ভ শব্দগুলো আইডেন্ডিফায়ার/নাম  হিসেবে ব্যবহার করা যাবে না। 
+
+রিসার্ভ শব্দগুলো হলো-
+break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, and with.
+এছাড়াও এখন class, const, enum, export, extends, import, super, implements, interface, let, package, private, protected, public, static, yield ,null,true এবং false.
+উক্ত নামগুলোকে ভ্যারিয়েবল নাম হিসেবে ব্যবহার করা  যাবে না। 
+
+এছাড়াও কিছু নন রিসার্ভ শব্দ রয়েছে যেগুলো অনেকটাই রিসার্ভ শব্দের মতো কাজ করে যা কিনা ভ্যারিয়েবল/ ফাংশন/অবজেক্ট/array/ক্লাস(class) ইত্যাদির নাম  দেওয়ার সময় ব্যবহার করা যাবে না।
+যেমন - NaN, Infinity, এবং undefined  যেগুলো global object এর  properties ।
+উদাহরণ হিসেবে - আমরা লিখতে পারি - var NaN = 42; এভাবে লিখলে কোন ধরণের এরর দেখাবে না এবং কোনকিছুও কাজ করবে না। কনফিউশন  দূর করার জন্য ভ্যারিয়েবল নাম হিসেবে ব্যবহার না করা ভালো। 
+// In the global scope
+var NaN = 42;
+console.log(NaN) // NaN প্রিন্ট করবে 
+// কিন্তু অন্য কোথাও যেমন ফাংশনের মধ্যে ব্যবহার করলে কাজ করবে 
+(function() {
+    var NaN = 42;
+    console.log(NaN) // 42 প্রিন্ট করবে
+}())
+এছাড়াও স্ট্রিক্ট মোড (Strict mode) এর ক্ষেত্রেও eval এবং arguments কে ভ্যারিয়েবল নাম হিসেবে ব্যবহার করা যাবে না । তারা মূলত সেই ক্ষেত্রে keyword হিসেবে কাজ করে ।
+
+ক্রেডিট ঃ
+১। https://flaviocopes.com/javascript-lexical-structure/ 
+২। https://mathiasbynens.be/notes/javascript-identifiers
